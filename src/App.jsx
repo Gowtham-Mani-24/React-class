@@ -24,8 +24,9 @@ function App({notes}) {
       <h1>Notes</h1>
       <ul>
         {
-          notes.map((note)=>{
-            return <li>{note.content}</li>
+          notes.map((note, index)=>{
+            //return <li key={note.id}>{note.content}</li>//used key to avoid unique key error
+            return <li key={index}>{note.content}</li>//exverytime id will not be there so we use index to avoid this error
           })
         }
       </ul>
