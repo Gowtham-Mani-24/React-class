@@ -26,7 +26,7 @@ const notes = [
     content:'HTML is Excellent',
     data:'2015-08-12',
     important:true
-  },
+  }
 ]
 ReactDOM.createRoot(document.getElementById('root')).render(
   
