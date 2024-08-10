@@ -1,10 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Hello from './components/Hello';
 
-export class App extends Component {
+
+class App extends Component {
   render() {
+
+    const names = [
+      "Leo",
+      "Harold",
+      "Antony"
+    ]
+
     return (
       <div>
-        <h1>Junga</h1>
+        <Hello 
+        name={names[0]}
+        />
+        <Hello 
+        name={names[1]}
+        />
+        <Hello 
+        name={names[2]}
+        />
       </div>
     )
   }
