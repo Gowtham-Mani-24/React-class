@@ -7,7 +7,7 @@ const notes = [
     id:1,
     content:'HTML is easy',
     data:'2015-05-12',
-    important:true
+    important:false
   },
   {
     id:2,
