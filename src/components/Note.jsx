@@ -1,19 +1,8 @@
-function Note({note}){
-    //conditionl rendering
-
-    //using if - else statement
-    // if(note.important){
-    //     return <li>{note.content}{'★'}</li>
-    // }
-    // else{
-    //     return <li>{note.content}</li>
-    // }
-
-    //using ternary operaor
-   // return note.important ?  <li>{note.content}{'★'}</li> :  <li>{note.content}</li>
+function Note({note}){   
+    // handling events
+    const handleClick = () => console.log(`${note.content} clicked`);
     
-    // using logical &&
-    return <li>
+    return <li onClick={handleClick}>
         {note.content} {note.important && '★'}
     </li>
   }
