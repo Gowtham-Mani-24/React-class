@@ -4,19 +4,28 @@ export class App extends Component {
  constructor () {
   super(); // calling th e parent constructor
   this.state = {
-    name:"Leo dass"
+    count:0
   }
   }
 
-    handleClick = () => {
-      // should not mutate the state directly
-    //this.state.name = 'Harold'
+  incClick = () => {     
     this.setState({
-      name:'harold dass'
+      count: this.state.count + 1
     })
     console.log(this.state);
   }
 
+  decClick = () => {
+    this.setState({
+      count:this.state.count -1
+    })
+  }
+
+  resClick = () => {
+    this.setState({
+      count:0
+    })
+  }
  
   render() {
     console.log(this.state);
@@ -24,8 +33,10 @@ export class App extends Component {
     
     return (
       <div>
-        <h1>Hello {this.state.name}</h1>
-        <button onClick={this.handleClick}>Update Name</button>
+        <h1>Count: {this.state.count}</h1>
+        <button onClick={this.incClick}>Increment</button>
+        <button onClick={this.decClick}>Decrement</button>
+        <button onClick={this.resClick}>Reset</button>
       </div>
     )
   }
