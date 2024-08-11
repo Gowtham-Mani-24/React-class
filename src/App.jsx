@@ -1,45 +1,19 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-export class App extends Component {
- constructor () {
-  super(); // calling th e parent constructor
-  this.state = {
-    count:0
-  }
-  }
-
-  incClick = () => {     
-    this.setState({
-      count: this.state.count + 1
-    })
-    console.log(this.state);
+function App() {
+  const [name,setName] = useState('Leo Dass');
+  
+  function handleClick  ()  {
+    //console.log('button is clicked');
+    setName('Antony Dass')
   }
 
-  decClick = () => {
-    this.setState({
-      count:this.state.count -1
-    })
-  }
-
-  resClick = () => {
-    this.setState({
-      count:0
-    })
-  }
- 
-  render() {
-    console.log(this.state);
-
-    
-    return (
-      <div>
-        <h1>Count: {this.state.count}</h1>
-        <button onClick={this.incClick}>Increment</button>
-        <button onClick={this.decClick}>Decrement</button>
-        <button onClick={this.resClick}>Reset</button>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <h1>Hello {name}</h1>
+      <button onClick={handleClick}>Update Name</button>
+    </div>
+  )
 }
 
-export default App;
+export default App
