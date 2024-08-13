@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 const Navigation = () => {
   return (
@@ -7,10 +7,10 @@ const Navigation = () => {
       <nav>
         <ul>
             <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
             </li>
             <li>                
-                <a href="/about">About</a>
+                <Link to="/about">About</Link>
             </li>
         </ul>
       </nav>
