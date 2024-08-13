@@ -1,26 +1,9 @@
-import React, { useState } from 'react'
-import Login from './Components/Login';
+import React from 'react'
 
-const App = () => {
-
-  const [page, setPage] = useState('home');
-
-  const toPage = (page) => (e)  =>{
-    e.preventDefault();
-    setPage(page);
-  }
-
-  const content = () => {
-    if(page === 'login') {
-      return <Login />
-    }
-  }
-
+ function App() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <a href='/login' onClick={toPage('login')}>Login</a>
-      {content()}
+      <h1>Junga</h1>
     </div>
   )
 }
