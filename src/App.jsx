@@ -1,28 +1,25 @@
-import React, { useState } from 'react'
-import Login from './Components/Login';
+import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+// create a router object
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<h1>Home</h1>
+  },
+  {
+    path:'/about',
+    element:<h1>About</h1>
+  }
+])
 
 const App = () => {
-
-  const [page, setPage] = useState('home');
-
-  const toPage = (page) => (e)  =>{
-    e.preventDefault();
-    setPage(page);
-  }
-
-  const content = () => {
-    if(page === 'login') {
-      return <Login />
-    }
-  }
-
   return (
-    <div>
-      <h1>Home Page</h1>
-      <a href='/login' onClick={toPage('login')}>Login</a>
-      {content()}
-    </div>
+    
+      <RouterProvider router={router}/>
+  
   )
 }
 
-export default App;
+export default App
