@@ -8,6 +8,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 10px;
+    text-align:center;
 }
 
 
@@ -23,5 +24,25 @@ p{
 .container {
     display: flex;
     justify-content: space-between;
-    
+    background-color: rgb(66, 113, 253);
+    position: absolute;
+    left: 243px;
+    bottom: 110px;
+    padding: 10px;
+    width: 64%;
 }
+
+button{
+    padding:10px 20px;
+    background-color: rgb(66, 113, 253);
+    color:white;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+button:hover {
+    background-color: #eaecf1;
+    color:black;
+  }
+
